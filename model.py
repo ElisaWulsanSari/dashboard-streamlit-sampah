@@ -14,6 +14,7 @@ try:
 except Exception:
     Prophet = None  # type: ignore
     PROPHET_AVAILABLE = False
+    pass
 
 # =============================
 # KONFIGURASI GLOBAL
@@ -504,3 +505,4 @@ def get_feature_importances(model: XGBRegressor, X_train: pd.DataFrame, top_n: i
         .head(top_n)
     )
     return fi.reset_index(drop=True)
+
